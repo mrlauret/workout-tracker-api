@@ -19,4 +19,5 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["python", "API/manage.py", "runserver", "0.0.0.0:8000"]
+WORKDIR /app/API
+CMD ["gunicorn", "--env", "PYTHONPATH=/app/API", "API.wsgi:application", "--bind", "0.0.0.0:8000"]
