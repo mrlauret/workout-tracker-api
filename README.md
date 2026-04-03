@@ -253,3 +253,4 @@ Before deploying, move these out of `settings.py` into a `.env` file:
 
 - `DEBUG = True` and `ALLOWED_HOSTS = ['*']` are for development only
 - CORS is configured for `http://localhost:3000` for local frontend development
+- Fully containerized using **Docker** and **Docker Compose**
